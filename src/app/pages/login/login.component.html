@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="content">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input [(ngModel)]="email" name="email" matInput placeholder="Ex. Pizza" value="Sushi">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Senha</mat-label>
+        <input type="password" [(ngModel)]="password" name="passowrd" matInput />
+      </mat-form-field>
+      <div class="example-full-width">
+        <button (click)="login()" class="btn" mat-button>Loggin</button>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <mat-grid-list class="content" cols="2" rowHeight="7:1">
+    <mat-grid-tile class="card" *ngFor="let item of branches" >
+      <div class="card-body">
+        <img id="{{item.name}}" src="{{item.logo}}" alt="">
+      <label for="{{item.name}}" >{{item.name}}</label>
+      </div>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
