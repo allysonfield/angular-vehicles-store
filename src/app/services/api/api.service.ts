@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ApiService {
-  url = 'http://localhost:3333';
+  url = 'https://server-auto-store.herokuapp.com';
 
   token = '';
 
