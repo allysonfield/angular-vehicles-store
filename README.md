@@ -1,6 +1,6 @@
 # VehiclesStore
 
-The Application is running on [Heroku](https://angular-auto-store.herokuapp.com/) 
+The Application is running on Heroku [Application](https://angular-auto-store.herokuapp.com/) 
 
 ## Documentation server 
 
