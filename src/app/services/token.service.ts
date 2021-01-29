@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs-compat';
-import 'rxjs/operators';
+import 'rxjs/add/observable/fromPromise';
 
 // import { Router } from "@angular/router";
 // import axios,{AxiosInstance} from 'axios';

@@ -4,7 +4,7 @@
 /* eslint-disable no-restricted-syntax */
 import { RequestOptions, URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/operators';
+import 'rxjs/add/operator/map';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
