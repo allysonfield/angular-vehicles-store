@@ -6,3 +6,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // regular style toast
 
 
+app-nav-component {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+

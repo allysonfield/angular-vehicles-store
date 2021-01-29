@@ -1,9 +1,11 @@
 <div class="container">
+  <h1>AUTO STORE</h1>
   <div class="content">
+
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Email</mat-label>
-        <input [(ngModel)]="email" name="email" matInput placeholder="Ex. Pizza" value="Sushi">
+        <input [(ngModel)]="email" name="email" matInput placeholder="name@email.com" value="Sushi">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
@@ -11,9 +13,14 @@
         <input type="password" [(ngModel)]="password" name="passowrd" matInput />
       </mat-form-field>
       <div class="example-full-width">
-        <button (click)="login()" class="btn" mat-button>Loggin</button>
+        <button (click)="login()" class="btn" mat-button>ENTER</button>
+
       </div>
     </form>
+    <div class="example-full-width">
+      <button routerLink="/register" class="btn" mat-button>REGISTER</button>
+
+    </div>
   </div>
 
 </div>

@@ -1,0 +1,52 @@
+
+<div class="iconb" (click)="goToMyCar()" style="position: fixed; right: 20px; z-index: 10;">
+  <img height="80px" src="../assets/images/unnamed.png" alt="">
+ </div>
+<div class="container">
+  <div class="title">
+    <h1>Choose a Car</h1>
+  </div>
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile  *ngFor="let item of cars" >
+        <!-- <img class="img-card" id="{{item.Images[0].url}}" src="{{item.Images[0].url}}" alt=""> -->
+       <div  class="card-body">
+        <ng-image-slider  [imageSize]="{width: 360, height: 210}"[images]="item.Images" #nav></ng-image-slider>
+        <div style="display: flex; flex-direction: row;">
+          <div style="display: flex; flex-direction: column;">
+            <label class="text-white" for="{{item.Images[0].url}}">{{item.name}}</label>
+            <label class="text-white" style="margin-bottom: 60px;">{{item.price}}</label>
+          </div>
+          <button (click)="goToBooking(item.id)"  color="primary" class="btn"  mat-raised-button>DETAILS</button>
+        </div>
+
+
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+</div>
+
+<!-- <mat-form-field>
+  <mat-label>List length</mat-label>
+  <input matInput [(ngModel)]="cars.count" type="number">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Page size</mat-label>
+  <input matInput [(ngModel)]="cars.count" type="number">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Page size options</mat-label>
+  <input matInput [ngModel]="[5, 10, 25, 100]"
+         [ngModelOptions]="{updateOn: 'blur'}" placeholder="Ex. 10,25,50">
+</mat-form-field>
+
+<mat-paginator [length]="cars.count"
+               [pageSize]="cars.count"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               >
+</mat-paginator> -->
+
+

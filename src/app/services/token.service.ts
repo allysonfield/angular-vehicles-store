@@ -9,7 +9,7 @@ import 'rxjs/add/observable/fromPromise';
 @Injectable()
 export class TokenService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token@vehiclesstorage');
     console.log(`ó o token aqui: ${token}`);
 
     if (!token) {

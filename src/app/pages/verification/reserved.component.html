@@ -1,0 +1,13 @@
+<div class="container">
+
+  <div class="content">
+
+    <div class="example-form">
+      <a *ngIf="!ok" type="button" (click)="verification()" class="verification">CONFIRM</a>
+      <h1 *ngIf="ok" class="text-muted"> Success!!! Your access is liberated.</h1>
+      <a class="lg" *ngIf="ok" routerLink="/login">Login</a>
+    </div>
+
+  </div>
+
+</div>

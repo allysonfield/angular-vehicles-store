@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="title">
+    <h1>My Cars</h1>
+  </div>
+  <mat-grid-list class="content" cols="2" rowHeight="1.5:1">
+    <mat-grid-tile
+
+      class="card"
+      *ngFor="let item of booking"
+
+      >
+
+        <img id="{{item.Car.Images[0].image}}" src="{{item.Car.Images[0].image}}" alt="">
+
+
+    <mat-grid-tile-footer style="border: 0.5px solid rgb(139, 134, 134)">
+      <div style="display: flex; flex-direction: column;">
+        <label class="desc" >{{item.Car.name}}</label>
+        <label class="desc">{{currency(item.Car.price)}}</label>
+
+      </div>
+      <div style="display: flex; flex-direction: column; margin-left: 15px;">
+        <label class="desc">{{item.Car.color.toUpperCase()}}</label>
+        <label class="desc">YEAR {{item.Car.year}}</label>
+      </div>
+    </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

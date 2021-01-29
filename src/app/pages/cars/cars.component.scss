@@ -1,0 +1,53 @@
+.container {
+  padding: 70px 0px;
+  // align-items: center;
+  // justify-content: center;
+  // display: flex;
+}
+
+.card{
+  // height: 600px;
+  width: 360px;
+}
+
+// .card-body{
+//   display: flex;
+//   flex-direction: column;
+
+//   // box-shadow: 2px 2px 1px 0px  rgb(185, 182, 182);
+//   height: 400px;
+//   width: 360px;
+//   margin: 40px;
+// }
+
+.card-footer {
+  margin-top: 20px;
+  position: relative;
+}
+
+.img-card{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.iconb:hover{
+  cursor: pointer;
+}
+.btn{
+  height: 30px;
+  margin-left: 10px;
+}
+
+.title h1{
+  font-family: 'Sora';
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+
+

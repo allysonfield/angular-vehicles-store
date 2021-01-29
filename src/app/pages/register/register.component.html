@@ -1,0 +1,73 @@
+
+<div class=" content">
+  <div class=" row">
+
+      <div style="padding: 40px;" class=" card">
+        <div class=" card-header"><h5 class=" title">Register</h5></div>
+        <div class=" card-body">
+          <form>
+            <div class=" row">
+              <div class=" col-md-6 pr-md-1">
+                <div class=" form-group">
+                  <label> Name </label>
+                  <input
+                    class=" form-control"
+                    [(ngModel)]="name"
+                    placeholder="type your name"
+                    type="text"
+                    name="name"
+                  />
+                </div>
+              </div>
+
+              <div class=" col-md-6 pl-md-1">
+                <div class=" form-group">
+                  <label for="exampleInputEmail1"> Email address </label>
+                  <input
+                    class=" form-control"
+                    placeholder="mike@email.com"
+                    type="email"
+                    [(ngModel)]="email"
+                    name="email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=" row">
+              <div class=" col-md-6 pr-md-1">
+                <div class=" form-group">
+                  <label> Birthdate</label>
+                  <input
+                    class=" form-control"
+                    placeholder="type your birthdate"
+                    type="text"
+                    mask=" 00/00/0000"
+                    [(ngModel)]="birthdate"
+                    name="birthdate"
+                  />
+                </div>
+              </div>
+              <div class=" col-md-6 pl-md-1">
+                <div class=" form-group">
+                  <label> Password </label>
+                  <input
+                    class=" form-control"
+                    placeholder="make a password"
+                    type="password"
+                    [(ngModel)]="password"
+                    name="password"
+                  />
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class=" card-footer">
+          <button (click)="register()"  class=" btn btn-fill btn-danger" type="submit">Confirm</button>
+        </div>
+      </div>
+
+
+  </div>
+</div>

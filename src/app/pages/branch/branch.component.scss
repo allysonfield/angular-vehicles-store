@@ -1,10 +1,10 @@
 .container {
-  padding: 1px 0px;
+  padding: 20px 0px;
 }
 
 .card{
   border: 1px solid rgb(161, 157, 157);
-
+  background-color: rgb(177, 192, 206);
 }
 
 .card-body{
@@ -14,10 +14,12 @@
   padding: 20px;
 }
 
+
+
 .card:hover{
   cursor: pointer;
 }
 
-.content{
-  // padding: 40px;
+.iconb:hover{
+  cursor: pointer;
 }

@@ -1,0 +1,43 @@
+.container {
+  padding: 10px 100px;
+}
+
+.card{
+  border: 1px solid rgb(161, 157, 157);
+  flex-direction: column;
+  display: flex;
+  margin: 2px;
+}
+
+.card-body{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 400px;
+}
+
+.card img {
+  height: 84%;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+}
+
+
+.card:hover{
+  cursor: pointer;
+}
+
+.iconb:hover{
+  cursor: pointer;
+}
+
+.title h1{
+  font-family: 'Sora';
+  font-weight: bolder;
+}
+
+.desc{
+  font-family: 'Sora';
+  font-weight: bolder;
+}

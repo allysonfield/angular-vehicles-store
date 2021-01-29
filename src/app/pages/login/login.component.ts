@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToasterService } from 'angular2-toaster';
+import { AppComponent } from 'src/app/app.component';
 import { AuthenticateService } from 'src/app/services/api/authenticate.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
     private authenticate: AuthenticateService,
     public route: Router,
     private toastr: ToasterService,
+    public app: AppComponent,
   ) {}
 
   ngOnInit(): void {}
@@ -26,22 +28,35 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.email === '' || this.password === '') {
-      this.showNotification('error', 'Atenção', 'Preencha todos os dados.');
-    } else {
-      this.authenticate.login({ email: this.email, password: this.password }).subscribe((resp) => {
-        const ob = JSON.stringify(resp);
-        const obj = JSON.parse(ob);
-        console.log('resposta', obj);
-        this.route.navigate(['/branch']);
-        // if (obj.message === 'Logado com sucesso') {
-        //   localStorage.setItem('data_user@openbank', JSON.stringify(obj.user));
-        //   localStorage.setItem('token', obj.token);
-        //   this.route.navigate(['/dashboard']);
-        // } else {
-        //   alert('Email ou senha incorretos');
-        // }
-      });
+    this.app.load(true);
+    try {
+      if (this.email === '' || this.password === '') {
+        this.showNotification('error', 'Atenção', 'Preencha todos os dados.');
+      } else {
+        this.authenticate.login({ email: this.email, password: this.password }).subscribe(
+          (resp) => {
+            const ob = JSON.stringify(resp);
+            const obj = JSON.parse(ob);
+            console.log('resposta', obj);
+
+            if (obj.message === 'Success') {
+              localStorage.setItem('token@vehiclesstorage', obj.token);
+
+              this.route.navigate(['/branch']);
+            } else {
+              this.showNotification('error', 'Unauthorized', 'Email or password invalids.');
+            }
+            this.app.load(false);
+          },
+          (error) => {
+            this.app.load(false);
+            console.log(error.error);
+            this.showNotification('error', 'Unauthorized', error.error);
+          },
+        );
+      }
+    } catch (error) {
+      console.log(error.response);
     }
   }
 }

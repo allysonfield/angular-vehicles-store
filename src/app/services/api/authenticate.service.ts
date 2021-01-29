@@ -16,19 +16,21 @@ export class AuthenticateService {
 
   /// /////////////// WEB CALLS ////////////////////
 
-  callService(cep: String): any {
-    return this.http.get(`http://viacep.com.br/ws/${cep}/json/`);
-  }
-
   login(pObjeto: any) {
     const seq = this.api.post('login', pObjeto);
     seq.map((res: any) => res);
     return seq;
   }
 
-  userRegister(pObjeto: any) {
-    const seq = this.api.post('user/register', pObjeto);
+  Register(pObjeto: any) {
+    const seq = this.api.post('create', pObjeto);
     seq.map((res: any) => res);
+    return seq;
+  }
+
+  Verification(pObjeto: any) {
+    const seq = this.api.get(`verification/${pObjeto.email}/${pObjeto.verification_code}`);
+    seq.map((res) => res);
     return seq;
   }
 }

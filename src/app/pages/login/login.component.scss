@@ -6,13 +6,15 @@
 
 .example-full-width {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .container {
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 150px 4px;
+  padding: 100px 4px;
+  flex-direction: column;
 }
 
 .content {
@@ -22,6 +24,11 @@
 
 .btn {
   width: 100%;
+}
+
+h1{
+  font-family: 'Sora';
+  font-weight: bolder;
 }
 
 

@@ -36,7 +36,8 @@ module.exports = {
        'no-console': 'off',
        'no-alert': 'off',
        'radix': 'off',
-       'import/no-extraneous-dependencies': 'off'
+       'import/no-extraneous-dependencies': 'off',
+       'prefer-destructuring': 'off'
       }
     },
     {
