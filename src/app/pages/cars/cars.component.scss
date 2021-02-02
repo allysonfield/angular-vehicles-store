@@ -1,13 +1,49 @@
 .container {
-  padding: 70px 0px;
-  // align-items: center;
-  // justify-content: center;
-  // display: flex;
+  padding: 50px 10px;
+}
+
+.image-container {
+ max-width: 300px;
+ background: #FFF;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-gap: 40px;
+}
+
+.content-grid {
+  border: solid 6px #BA54F5;
+  border-radius: 8px;
+  box-shadow: 3px 5px 5px rgb(12, 12, 12);
 }
 
 .card{
   // height: 600px;
   width: 360px;
+}
+
+.footer-image {
+  margin-top: -5px;
+  background: #FFF;
+  max-width: 300px;
+
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+
+}
+
+p {
+  color: black;
+  margin-left: 10px;
+  font-family: 'Sora';
+  font-weight: bolder;
 }
 
 // .card-body{

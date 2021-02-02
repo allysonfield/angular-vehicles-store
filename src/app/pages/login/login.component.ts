@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
 
             if (obj.message === 'Success') {
               localStorage.setItem('token@vehiclesstorage', obj.token);
-
+              this.app.logged = true;
               this.route.navigate(['/branch']);
             } else {
               this.showNotification('error', 'Unauthorized', 'Email or password invalids.');

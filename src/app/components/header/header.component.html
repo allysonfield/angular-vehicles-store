@@ -1,0 +1,19 @@
+<nav class="header-main">
+  <a href="">Logo</a>
+  <ul class="menu">
+
+    <li>
+      <a routerLink="/branch" routerLinkActive="active-link" href="javascript:void(0)">
+      Branchs
+    </a></li>
+    <li><a routerLink="/mycar" routerLinkActive="active-link" href="javascript:void(0)">My Cars</a></li>
+    <li><button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+    </button></li>
+  </ul>
+
+</nav>
+<mat-menu #menu="matMenu" >
+  <button mat-menu-item>Item 1</button>
+  <button (click)="logOut()" mat-menu-item>Log out</button>
+</mat-menu>

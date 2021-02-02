@@ -1,25 +1,39 @@
-.container {
-  padding: 20px 0px;
+.container-m {
+  padding: 100px 0px;
 }
 
-.card{
-  border: 1px solid rgb(161, 157, 157);
-  background-color: rgb(177, 192, 206);
+p {
+
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Sora';
 }
 
-.card-body{
-  align-items: center;
-  flex-direction: column;
+img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.flex{
+  margin: 0 auto;
+  margin-left: 140px;
   display: flex;
-  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
 }
 
-
+.flex > div{
+  flex: 1 1 200px;
+  margin: 10px;
+}
 
 .card:hover{
   cursor: pointer;
 }
 
-.iconb:hover{
+.flex > div:hover{
   cursor: pointer;
 }

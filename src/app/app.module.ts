@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { MatMenuModule } from '@angular/material/menu';
 import { ToasterModule } from 'angular2-toaster';
 import { MatIconModule } from '@angular/material/icon';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
@@ -27,6 +28,7 @@ import { MycarComponent } from './pages/mycar/mycar.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -47,6 +49,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     RegisterComponent,
     SuccessComponent,
     LoadingComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     MatGridListModule,
     MatPaginatorModule,
     NgImageSliderModule,
+    MatMenuModule,
     MatIconModule,
     FormsModule,
     HttpModule,

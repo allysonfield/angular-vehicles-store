@@ -1,8 +1,6 @@
-<div class="iconb" (click)="goToMyCar()" style="position: fixed; right: 20px; z-index: 10;">
-  <img height="80px" src="../assets/images/unnamed.png" alt="">
- </div>
-<div class="container">
-  <mat-grid-list class="content" cols="2" rowHeight="5:1">
+
+
+  <!-- <mat-grid-list class="content" cols="2" rowHeight="6:1">
     <mat-grid-tile
       (click)="goToCars(item.id)"
       class="card"
@@ -15,5 +13,19 @@
       </div>
 
     </mat-grid-tile>
-  </mat-grid-list>
+  </mat-grid-list> -->
+
+<div class="container-m">
+  <section
+
+    class="flex"
+    >
+      <div *ngFor="let item of branches" (click)="goToCars(item.id)">
+        <img src="{{item.logo}}" alt="{{item.name}}">
+        <p>{{item.name}}</p>
+      </div>
+    </section>
 </div>
+
+
+
