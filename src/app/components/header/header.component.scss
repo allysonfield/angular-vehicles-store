@@ -33,3 +33,72 @@ a {
   display: block;
   padding: 10px;
 }
+@media (max-width: 414px){
+  .menu {
+    align-items: center;
+  }
+  .menu li a{
+    display: block;
+    padding: 5px;
+  }
+
+  .menu li {
+    margin-left: 4px;
+  }
+
+  .header-main > a {
+    display: block;
+    padding: 0 5px;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 360px){
+  body,
+  ul,
+  li,
+  p {
+    margin: 0;
+    list-style: none;
+    font-size: 1rem;
+    font-family: 'Sora';
+  }
+
+  .menu {
+    padding: 0px;
+    align-items: center;
+  }
+
+
+
+
+}
+
+@media (max-width: 320px){
+  body,
+  ul,
+  li,
+  p {
+    margin: 0;
+    list-style: none;
+    font-size: 0.7rem;
+    font-family: 'Sora';
+  }
+.menu {
+  padding: 0px;
+  align-items: center;
+}
+  .menu li a{
+    display: block;
+    padding: 3px;
+  }
+
+  .menu li {
+    margin-left: 4px;
+  }
+
+  .header-main > a {
+    display: block;
+    padding: 0 ;
+    margin: 0;
+  }
+}

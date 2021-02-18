@@ -15,19 +15,19 @@ img {
   margin-bottom: 10px;
 }
 
-.flex{
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 940px;
   margin: 0 auto;
-  margin-left: 140px;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  grid-gap: 40px;
   align-items: center;
-  justify-content: center;
 }
 
-.flex > div{
-  flex: 1 1 200px;
-  margin: 10px;
+.grid > div{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover{
@@ -36,4 +36,28 @@ img {
 
 .flex > div:hover{
   cursor: pointer;
+}
+
+@media (max-width: 710px) {
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media (max-width: 414px) {
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (max-width: 375px) {
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 360px;
+  }
 }

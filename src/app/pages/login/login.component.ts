@@ -28,11 +28,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.app.load(true);
     try {
       if (this.email === '' || this.password === '') {
         this.showNotification('error', 'Atenção', 'Preencha todos os dados.');
       } else {
+        this.app.load(true);
         this.authenticate.login({ email: this.email, password: this.password }).subscribe(
           (resp) => {
             const ob = JSON.stringify(resp);

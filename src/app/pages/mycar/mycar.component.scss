@@ -1,28 +1,125 @@
+body, label{
+  font-family: 'Sora';
+}
+
 .container {
-  padding: 10px 100px;
+  padding: 50px 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 940px;
+  margin: 0 auto;
+  grid-gap: 40px;
+}
+
+.grid > .content-grid {
+  border: solid 6px #BA54F5;
+  border-radius: 8px;
+  box-shadow: 3px 5px 5px rgb(12, 12, 12);
+  max-width: 274.63px;
+  height: 290.88px;
+}
+
+.grid > .content-grid > img {
+  max-width: 100%;
+  background: #FFF;
+  height: 205.98px;
+ }
+
+ .footer-image {
+   display: block;
+
+}
+
+.footer-image > div {
+  background: #FFF;
+  display: flex;
+  height: 73px;
+  padding: 0px 10px;
+  justify-content: flex-start;
+  align-items: baseline;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+@media (max-width: 993px) {
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 600px){
+  .container{
+    padding: 40px 0;
+  }
+  .grid {
+    /* margin-top: 830px; */
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 280px;
+  }
+
+  .grid > .content-grid {
+    border: solid 6px #BA54F5;
+    border-radius: 8px;
+    box-shadow: 3px 5px 5px rgb(12, 12, 12);
+    max-width: 100%;
+  }
 }
 
 .card{
-  border: 1px solid rgb(161, 157, 157);
-  flex-direction: column;
-  display: flex;
-  margin: 2px;
+  // height: 600px;
+  width: 360px;
 }
 
-.card-body{
-  align-items: center;
-  flex-direction: column;
+.footer-image {
+  background: #FFF;
   display: flex;
-  height: 400px;
+  justify-content: flex-start;
+  align-items: baseline;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
-.card img {
-  height: 84%;
+p {
+  color: black;
+  margin-left: 10px;
+  font-family: 'Sora';
+  font-weight: bolder;
+}
+
+// .card-body{
+//   display: flex;
+//   flex-direction: column;
+
+//   // box-shadow: 2px 2px 1px 0px  rgb(185, 182, 182);
+//   height: 400px;
+//   width: 360px;
+//   margin: 40px;
+// }
+
+.card-footer {
+  margin-top: 20px;
+  position: relative;
+}
+
+.img-card{
   width: 100%;
-  top: 0px;
-  position: absolute;
+  height: 100%;
+  position: relative;
 }
-
 
 .card:hover{
   cursor: pointer;
@@ -31,13 +128,16 @@
 .iconb:hover{
   cursor: pointer;
 }
+.btn{
+  height: 30px;
+  margin-left: 10px;
+}
 
 .title h1{
   font-family: 'Sora';
-  font-weight: bolder;
+  font-weight: bold;
+  margin-left: 45px;
 }
 
-.desc{
-  font-family: 'Sora';
-  font-weight: bolder;
-}
+
+
